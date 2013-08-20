@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include <QtNetwork>
 
 namespace Ui {
 class Widget;
@@ -17,6 +18,10 @@ public:
     
 private:
     Ui::Widget *ui;
+    QTcpServer *tcpServer;
+
+private slots:
+    void sendMessage();
 };
 
 #endif // WIDGET_H
