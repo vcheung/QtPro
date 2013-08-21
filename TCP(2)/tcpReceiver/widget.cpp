@@ -33,7 +33,7 @@ void Widget::start() //开始监听
 
 void Widget::acceptConnection()  //接受连接
 {
-    tcpServerConnection = tcpServer.nextPendingConnection();
+    tcpServerConnection = tcpServer.nextPendingConnection();    //tcpServer通过nextPendingConnection获取最近连接到的Qtcpsocket
     connect(tcpServerConnection,SIGNAL(readyRead()),this, SLOT(updateServerProgress()));
     connect(tcpServerConnection,SIGNAL(error(QAbstractSocket::SocketError)),this,SLOT(displayError(QAbstractSocket::SocketError)));
     ui->serverStatusLabel->setText(tr("接受连接"));
