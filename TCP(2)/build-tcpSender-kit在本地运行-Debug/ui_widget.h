@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'widget.ui'
 **
-** Created: Tue Aug 20 17:05:37 2013
+** Created: Wed Aug 21 15:40:51 2013
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -58,7 +58,7 @@ public:
         clientProgressBar->setValue(0);
         clientStatusLabel = new QLabel(Widget);
         clientStatusLabel->setObjectName(QString::fromUtf8("clientStatusLabel"));
-        clientStatusLabel->setGeometry(QRect(50, 200, 201, 16));
+        clientStatusLabel->setGeometry(QRect(20, 200, 341, 16));
         openButton = new QPushButton(Widget);
         openButton->setObjectName(QString::fromUtf8("openButton"));
         openButton->setGeometry(QRect(50, 230, 75, 23));

@@ -13,7 +13,8 @@ Widget::Widget(QWidget *parent) :
     bytesToWrite = 0;
     tcpClient = new QTcpSocket(this);
     connect(tcpClient,SIGNAL(connected()),this,SLOT(startTransfer()));  //当连接服务器成功时，发出connected()信号，我们开始传送文件
-    connect(tcpClient,SIGNAL(bytesWritten(qint64)),this, SLOT(updateClientProgress(qint64)));     //当有数据发送成功时，我们更新进度条
+    connect(tcpClient,SIGNAL(bytesWritten(qint64)),this, SLOT(updateClientProgress(qint64)));
+    //当一个数据被写入网络时bytesWritten信号被发射_即有数据发送成功时，我们更新进度条
     connect(tcpClient,SIGNAL(error(QAbstractSocket::SocketError)),this,SLOT(displayError(QAbstractSocket::SocketError)));
     ui->sendButton->setEnabled(false);     //开始使”发送“按钮不可用
 }
