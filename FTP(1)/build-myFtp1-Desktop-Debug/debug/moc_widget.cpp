@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'widget.h'
 **
-** Created: Thu Dec 5 10:10:53 2013
+** Created: Thu Dec 5 09:55:25 2013
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../Http/widget.h"
+#include "../../myFtp1/widget.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'widget.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 62
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Widget[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,19 +32,14 @@ static const uint qt_meta_data_Widget[] = {
 
  // slots: signature, parameters, type, tag, flags
        8,    7,    7,    7, 0x08,
-      38,    7,    7,    7, 0x08,
-      62,    7,    7,    7, 0x08,
-      77,    7,    7,    7, 0x08,
-      95,   93,    7,    7, 0x08,
+      33,   31,    7,    7, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Widget[] = {
-    "Widget\0\0replyFinished(QNetworkReply*)\0"
-    "on_pushButton_clicked()\0httpFinished()\0"
-    "httpReadyRead()\0,\0"
-    "updateDataReadProgress(qint64,qint64)\0"
+    "Widget\0\0ftpCommandStarted(int)\0,\0"
+    "ftpCommandFinished(int,bool)\0"
 };
 
 const QMetaObject Widget::staticMetaObject = {
@@ -76,14 +71,11 @@ int Widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: replyFinished((*reinterpret_cast< QNetworkReply*(*)>(_a[1]))); break;
-        case 1: on_pushButton_clicked(); break;
-        case 2: httpFinished(); break;
-        case 3: httpReadyRead(); break;
-        case 4: updateDataReadProgress((*reinterpret_cast< qint64(*)>(_a[1])),(*reinterpret_cast< qint64(*)>(_a[2]))); break;
+        case 0: ftpCommandStarted((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: ftpCommandFinished((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
         default: ;
         }
-        _id -= 5;
+        _id -= 2;
     }
     return _id;
 }
